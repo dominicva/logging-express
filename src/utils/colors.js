@@ -1,6 +1,6 @@
 const chalk = require('chalk'); // pkg to style terminal/console output
 
-// Define colors to make console output friendlier
+// Define our color palette!
 module.exports = {
   welcome: chalk.black.bgYellowBright.bold,
   success: {
