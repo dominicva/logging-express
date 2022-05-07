@@ -1,9 +1,8 @@
-import * as chalk from 'chalk';
+import chalk from 'chalk';
 
 interface ColorConfig {
   [key: string]: {
-    text?: Function;
-    heading?: Function;
+    [index: string]: chalk.Chalk;
   };
 }
 
