@@ -16,6 +16,10 @@
 
   - see `src/data.js` for the properties it currently reports
 
+## Screenshot example output
+
+![Alt Screenshot](./src/assets/logger_screenshot.png)
+
 ## Why?
 
 ### Hypothesis
