@@ -4,9 +4,11 @@ Here's a simple express server.
 Try bunch of request urls and see what logs you get!
 
 */
-
+import dotenv from 'dotenv';
 import express from 'express';
 import customLog from './main';
+
+dotenv.config();
 
 const PORT = 4000;
 const app = express();
