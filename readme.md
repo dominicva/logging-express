@@ -12,7 +12,7 @@
 
 ## What does it do?
 
-- Eeach time the server receives a request, `reqLogger()` produces a live report for various request properites.
+- Each time the server receives a request, `reqLogger()` produces a live report for various request properites.
 
   - see `src/data.js` for properties it currently reports on
 
@@ -38,9 +38,9 @@ Notice how you can see what url created the request from the logged output
 
 > Maybe tougher than it should be?
 
-I'm around 2 years into my coding journey. With this bit of experience, I notice that when I need to understand something, I now immediately **inspect** it in as much detail as I can.
+I'm around 2 years into my coding journey. With this bit of experience, I notice that when I need to understand something, I immediately **inspect** it in as much detail as I can.
 
-Some useful tactics
+#### Some useful tactics
 
 - console.log everything I don't know the type or value of
 
@@ -50,14 +50,14 @@ Some useful tactics
 
 - read docs and (with caution) stack overflow posts
 
-The problem
+#### The problem
 
-- unless you're pretty advanced, those tactics are
+Unless you're pretty advanced, those tactics are
 
-  1. cognitively taxing
+1. cognitively taxing
 
-  2. time consuming
+2. time consuming
 
-  3. confidence destroying for some people. It wouldn't surprise me if junior developer impostor syndrome begins somewhere here
+3. confidence destroying for some people. It wouldn't surprise me if junior developer impostor syndrome begins somewhere here
 
-> In that spirit, this middleware's purpose is to help free up some brain space. Your potential is too great to spend all day typing `console.log`. Reserve that brain power for the big stuff: learning and building.
+> In that spirit, this middleware's purpose is to help free up some brain space. Your potential is too great to spend all day typing `console.log`. Reserve your efforts for the big stuff: learning and building.
