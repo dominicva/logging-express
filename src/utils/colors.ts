@@ -1,8 +1,17 @@
-const chalk = require('chalk'); // pkg to style terminal/console output
+import * as chalk from 'chalk';
 
-// Define our color palette!
-module.exports = {
-  welcome: chalk.black.bgYellowBright.bold,
+interface ColorConfig {
+  [key: string]: {
+    text?: Function;
+    heading?: Function;
+  };
+}
+
+const colorPalette: ColorConfig = {
+  welcome: {
+    text: chalk.yellowBright.bold,
+    heading: chalk.black.bgYellowBright.bold,
+  },
   success: {
     text: chalk.green,
     heading: chalk.black.bold.bgGreenBright,
@@ -20,3 +29,5 @@ module.exports = {
     metaData: chalk.yellowBright,
   },
 };
+
+export default colorPalette;

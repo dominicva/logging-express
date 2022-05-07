@@ -1,4 +1,4 @@
-const genLogger = require('./utils/gen_numbered_logger');
+import genLogger from './utils/gen_numbered_logger';
 const welcomeLog = require('./utils/welcome_log');
 const composeDataWith = require('./utils/req_data_compose');
 const data = require('./data');

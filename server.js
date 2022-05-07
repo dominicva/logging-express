@@ -15,7 +15,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 
 // note customLog gets passed as the second argument here
-app.get('/tweets/:username/:favSport', customLog, (_req, res) => {
+app.get('/facts/:name/:favSport/:leastFavFood', customLog, (_req, res) => {
   res.send({ message: 'Fingers crossed we got some nice server logs' });
 });
 
