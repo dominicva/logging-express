@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/server.js",
   "scripts": {
-    "clean": "rimraf dist/*",
+    "clean": "rimraf ./dist",
     "build": "tsc",
     "dev": "tsc --watch",
     "server": "nodemon server.js",
