@@ -16,9 +16,10 @@
 
   - see `src/data.js` for the properties it currently reports
 
-## Screenshot example output
+## Example screenshots
 
-![Alt Screenshot](./src/assets/screenshot.png)
+![Alt Screenshot 1](./src/assets/screenshot1.png)
+![Alt Screenshot 2](./src/assets/screenshot2.png)
 
 ## Why?
 
