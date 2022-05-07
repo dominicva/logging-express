@@ -3,7 +3,7 @@ const welcomeLog = require('./utils/welcome_log');
 const composeDataWith = require('./utils/req_data_compose');
 const data = require('./data');
 
-function reqLogger(req) {
+function reqLogger(req, _res, next) {
   welcomeLog();
 
   const buildMessages = composeDataWith(req);
@@ -14,6 +14,8 @@ function reqLogger(req) {
   for (const message of messages) {
     customLog(message);
   }
+
+  next();
 }
 
 module.exports = reqLogger;

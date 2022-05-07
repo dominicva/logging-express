@@ -14,15 +14,9 @@ const app = express();
 // app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get(
-  '/tweets/:username/:favSport',
-  (req, _res, next) => {
-    customLog(req);
-    next();
-  },
-  (_req, res) => {
-    res.send({ message: 'Fingers crossed we got some nice server logs' });
-  }
-);
+// note customLog gets passed as the second argument here
+app.get('/tweets/:username/:favSport', customLog, (_req, res) => {
+  res.send({ message: 'Fingers crossed we got some nice server logs' });
+});
 
 app.listen(PORT, () => console.log(`Sever running on port: ${PORT}`));
