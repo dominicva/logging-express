@@ -8,7 +8,6 @@ function reqLogger(req, _res, next) {
 
   const buildMessages = composeDataWith(req);
   const messages = buildMessages(data);
-  console.log('messages:', messages);
 
   const customLog = genLogger();
   for (const message of messages) {
