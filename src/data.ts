@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   { prop: 'baseUrl', desc: 'The URL path on which a router was mounted.' },
   { prop: 'path', desc: 'Contains the path part of the request URL.' },
   {

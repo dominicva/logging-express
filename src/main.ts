@@ -1,9 +1,9 @@
 import genLogger from './utils/gen_numbered_logger';
 import welcomeLog from './utils/welcome_log';
 import composeDataWith from './utils/req_data_compose';
-const data = require('./data');
+import data from './data';
 
-function reqLogger(req, _res, next) {
+export default function reqLogger(req, _res, next) {
   welcomeLog();
 
   const buildMessages = composeDataWith(req);
@@ -16,5 +16,3 @@ function reqLogger(req, _res, next) {
 
   next();
 }
-
-module.exports = reqLogger;

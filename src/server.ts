@@ -1,11 +1,12 @@
 /*
-Here's a super simple express server to experiment with.
-Try out a bunch of request urls and see what logs you get.
-Go wild!
+
+Here's a simple express server.
+Try bunch of request urls and see what logs you get!
+
 */
 
-const express = require('express');
-const customLog = require('./main');
+import express from 'express';
+import customLog from './main';
 
 const PORT = 4000;
 const app = express();
