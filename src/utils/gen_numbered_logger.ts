@@ -1,4 +1,5 @@
-const { info, warning, regular, success } = require('./colors');
+import colors from './colors';
+const { info, regular, success, warning } = colors;
 const { log } = console;
 
 const genNumberedLogger =
@@ -19,4 +20,4 @@ const genNumberedLogger =
     );
   };
 
-module.exports = genNumberedLogger;
+export default genNumberedLogger;

@@ -1,11 +1,13 @@
-const { welcome } = require('./colors');
+import colors from './colors';
+const { welcome } = colors;
 const { log } = console;
+// console.log('welcome:', welcome);
 
 const welcomeLog = () =>
   log(
-    `\n${welcome(
+    `\n${welcome.heading(
       ` Let's take a closer look at some \n 'stuff' on the express request object `
     )}\n\nPlease note that in order to log non-primitive values properly they have been passed through JSON.stringify. In case you were wondering why objects had double quotes everywhere...\n`
   );
 
-module.exports = welcomeLog;
+export default welcomeLog;

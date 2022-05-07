@@ -4,7 +4,9 @@
     "target": "ESNext",
     "module": "CommonJS",
     "declaration": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "sourceMap": true
   },
   "include": ["src/**/*"]
 }

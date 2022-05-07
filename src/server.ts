@@ -5,7 +5,7 @@ Go wild!
 */
 
 const express = require('express');
-const customLog = require('./src/main');
+const customLog = require('./main');
 
 const PORT = 4000;
 const app = express();
