@@ -4,7 +4,7 @@
 
 - A custom middleware function for node/express servers
 
-  - see `reqLogger()` defined in `src/main.js`.
+  - see `reqLogger()` defined in `src/main.ts`.
 
 - Logging tool for continusously inspecting the state of the express request object
 
@@ -14,7 +14,7 @@
 
 - Each time the server receives a request, `reqLogger()` produces a live report for various request properites.
 
-  - see `src/data.js` for properties it currently reports on
+  - see `src/data.ts` for properties it currently reports on
 
 - A report includes
   - property name e.g. `req.path`
