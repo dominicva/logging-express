@@ -1,5 +1,7 @@
 # Logging Express
 
+> Note I'm in the early stages of refactoring to TypeScript
+
 ## What is it?
 
 - A custom middleware function for node/express servers
