@@ -18,7 +18,7 @@
 
 ## Screenshot example output
 
-![Alt Screenshot](./src/assets/logger_screenshot.png)
+![Alt Screenshot](./src/assets/screenshot.png)
 
 ## Why?
 
