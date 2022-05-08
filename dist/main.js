@@ -2,7 +2,6 @@
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 const gen_numbered_logger_1 = __importDefault(require("./utils/gen_numbered_logger"));
 const welcome_log_1 = __importDefault(require("./utils/welcome_log"));
 const req_data_compose_1 = __importDefault(require("./utils/req_data_compose"));
@@ -17,4 +16,4 @@ function reqLogger(req, _res, next) {
     }
     next();
 }
-exports.default = reqLogger;
+module.exports = reqLogger;

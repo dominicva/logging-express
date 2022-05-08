@@ -4,11 +4,9 @@ import welcomeLog from './utils/welcome_log';
 import composeDataWith from './utils/req_data_compose';
 import data from './data';
 
-export default function reqLogger(
-  req: Request,
-  _res: Response,
-  next: NextFunction
-): void {
+export = reqLogger;
+
+function reqLogger(req: Request, _res: Response, next: NextFunction): void {
   welcomeLog();
 
   const buildMessages = composeDataWith(req);

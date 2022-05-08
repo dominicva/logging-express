@@ -5,14 +5,7 @@ Try bunch of request urls and see what logs you get!
 
 */
 import dotenv from 'dotenv';
-import express, {
-  Express,
-  Application,
-  Response,
-  Request,
-  RequestHandler,
-  NextFunction,
-} from 'express';
+import express from 'express';
 import customLog from './main';
 
 dotenv.config();

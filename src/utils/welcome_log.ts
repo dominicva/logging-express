@@ -1,7 +1,6 @@
 import colors from './colors';
 const { welcome } = colors;
 const { log } = console;
-// console.log('welcome:', welcome);
 
 const welcomeLog = () =>
   log(
