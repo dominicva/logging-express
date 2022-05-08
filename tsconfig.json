@@ -4,9 +4,17 @@
     "target": "ESNext",
     "module": "CommonJS",
     "declaration": true,
+    "declarationDir": "./dist/types",
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "sourceMap": false
+    "sourceMap": false,
+    // "strict": true,
+    // "noImplicitAny": true,
+    "removeComments": false,
+    "noUnusedParameters": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "alwaysStrict": true
   },
   "include": ["src/**/*"]
 }

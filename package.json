@@ -1,17 +1,23 @@
 {
-  "name": "logging-express",
+  "name": "@notthedom/logging-express",
   "version": "1.0.0",
-  "description": "",
-  "main": "dist/server.js",
+  "description": "Logging middleware for the express server request object",
+  "main": "dist/main.js",
   "scripts": {
     "clean": "rimraf ./dist",
     "build": "tsc",
     "dev": "tsc --watch",
-    "server": "nodemon server.js",
-    "start": "concurrently --prefix-colors \"white.dim\" --timings \"npm run dev\" \"nodemon dist/server.js\""
+    "server": "nodemon dist/server.js",
+    "start": "concurrently --prefix-colors \"white.dim\" --timings \"npm run dev\" \"npm run server\""
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "express",
+    "middleware",
+    "logger",
+    "custom",
+    "request"
+  ],
+  "author": "Dom van Almsick <notthedom@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@types/dotenv": "^8.2.0",

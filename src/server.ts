@@ -5,12 +5,20 @@ Try bunch of request urls and see what logs you get!
 
 */
 import dotenv from 'dotenv';
-import express from 'express';
+import express, {
+  Express,
+  Application,
+  Response,
+  Request,
+  RequestHandler,
+  NextFunction,
+} from 'express';
 import customLog from './main';
 
 dotenv.config();
 
-const PORT = 4000;
+const port = process.env.SERVER_PORT ?? 4000;
+
 const app = express();
 
 // only required if client wants to send json in the request body
@@ -22,4 +30,4 @@ app.get('/facts/:name/:favSport/:leastFavFood', customLog, (_req, res) => {
   res.send({ message: 'Fingers crossed we got some nice server logs' });
 });
 
-app.listen(PORT, () => console.log(`Sever running on port: ${PORT}`));
+app.listen(port, () => console.log(`Sever running on port: ${port}`));
