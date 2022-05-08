@@ -9,7 +9,7 @@
     "moduleResolution": "node",
     "sourceMap": false,
     "strict": true,
-    // "noImplicitAny": true,
+    "noImplicitAny": true,
     "removeComments": false,
     "noUnusedParameters": true,
     "strictFunctionTypes": true,

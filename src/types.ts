@@ -3,3 +3,7 @@ export interface LogItem {
   value: any;
   description?: string;
 }
+
+export type Logger = (props: LogItem) => void;
+
+export type GenNumberedLogger = (start?: number) => Logger;

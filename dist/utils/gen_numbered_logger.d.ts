@@ -1,3 +1,3 @@
-import { LogItem } from '../types';
-declare const genNumberedLogger: (itemNum?: number) => ({ name, value, description }: LogItem) => void;
+import { GenNumberedLogger } from '../types';
+declare const genNumberedLogger: GenNumberedLogger;
 export default genNumberedLogger;
