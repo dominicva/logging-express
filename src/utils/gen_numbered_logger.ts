@@ -1,10 +1,11 @@
+import { LogItem } from '../types';
 import colors from './colors';
 const { info, regular, success, warning } = colors;
 const { log } = console;
 
 const genNumberedLogger =
   (itemNum = 0) =>
-  ({ name, value, description }) => {
+  ({ name, value, description }: LogItem): void => {
     log(
       `${info.heading(` ${itemNum++}. ${name} `)}\n\n${info.text(
         description
