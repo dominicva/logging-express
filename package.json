@@ -1,6 +1,6 @@
 {
   "name": "@notthedom/logging-express",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Logging middleware for the express server request object",
   "main": "dist/main.js",
   "scripts": {
