@@ -2,7 +2,7 @@ import colors from './colors';
 const { welcome } = colors;
 const { log } = console;
 
-const welcomeLog = () =>
+const welcomeLog = (): void =>
   log(
     `\n${welcome.heading(
       ` Let's take a closer look at some \n 'stuff' on the express request object `

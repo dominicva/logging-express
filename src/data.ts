@@ -1,4 +1,6 @@
-export default [
+import { PropDescriptor } from './types';
+
+const data: PropDescriptor[] = [
   { prop: 'baseUrl', desc: 'The URL path on which a router was mounted.' },
   { prop: 'path', desc: 'Contains the path part of the request URL.' },
   {
@@ -17,12 +19,13 @@ export default [
   },
   {
     prop: 'query',
-    desc: `A "query string" is one way to communicate data within a url.\nYou may have seen a url including something like:\n\n\t?username=imcool&age=1431&isLiar=true\n\nProcessing this "syntax" is why we need body parsing middleware. We've all seen it, but maybe not understood its exact time of need.\nEver seen this in a server file?\n\n\tapp.use(urlencoded())\n\nurlencoded() is a function that will convert ?username=imcool&age=1431&isLiar=true on an incoming url to an object that looks like
+    desc: `A "query string" is a way to add data to a url.\nYou may have seen a url like:\n\n\t?username=imcool&age=43\n\nProcessing this "syntax" is why we need "body parsers". We've seen them, but maybe not appreciated their purpose.\nEver seen this?\n\n\tapp.use(urlencoded())\n\nurlencoded() converts ?username=imcool&age=43 to an object that looks like
 
   {
     username: 'imcool',
-    age: '1431',
-    isLiar: 'true'
+    age: '43',
   }\n\nI highly recommend this wikipedia article: https://en.wikipedia.org/wiki/Query_string`,
   },
 ];
+
+export = data;

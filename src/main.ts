@@ -4,8 +4,6 @@ import welcomeLog from './utils/welcome_log';
 import composeDataWith from './utils/req_data_compose';
 import data from './data';
 
-export = reqLogger;
-
 function reqLogger(req: Request, _res: Response, next: NextFunction): void {
   welcomeLog();
 
@@ -19,3 +17,5 @@ function reqLogger(req: Request, _res: Response, next: NextFunction): void {
 
   next();
 }
+
+export = reqLogger;

@@ -1,5 +1,3 @@
-declare const _default: {
-    prop: string;
-    desc: string;
-}[];
-export default _default;
+import { PropDescriptor } from './types';
+declare const data: PropDescriptor[];
+export = data;

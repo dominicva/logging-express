@@ -1,4 +1,4 @@
-import { LogItem, GenNumberedLogger, Logger } from '../types';
+import { GenNumberedLogger, Logger } from '../types';
 import colors from './colors';
 const { info, regular, success, warning } = colors;
 const { log } = console;

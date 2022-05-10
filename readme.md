@@ -1,65 +1,139 @@
 # Logging Express
 
-> Note I'm in the early stages of refactoring to TypeScript
-
 ## What is it?
 
-- A custom middleware function for node/express servers
+- custom node/express logging middleware
+- intended as a debugger and learning aid
+- newcomers to node/express might enjoy it most
 
-  - see `reqLogger()` defined in `src/main.ts`.
+## Installation
 
-- Logging tool for continusously inspecting the state of the express request object
+> It's scoped to my npm account, hence the `@notthedom` in the install command
 
-- Hopefully a helpful debugging and learning aid
+```shell
+npm install --save-dev @notthedom/logging-express
+```
 
-## What does it do?
+- exposes a default export function. See `src/main.ts`
+  - Note you can name default exports whatever you want when you import them
+- you probably want it as a dev dependency
 
-- Each time the server receives a request, `reqLogger()` produces a live report for various request properites.
+## Getting started
 
-  - see `src/data.ts` for properties it currently reports on
+### Import/require
 
-- A report includes
+> works with esmodules and commonjs
+
+```javascript
+// all good
+import myShinyLogger from '@notthedom/logging-express';
+
+// also works
+const mySpecialLogger = require('@notthedom/logging-express');
+```
+
+### Usage
+
+> Mount as middleware on express server (various ways of doing this of course)
+
+#### Example
+
+```javascript
+// The usual...
+import express from 'express';
+import myLogger from '@notthedom/logging-express';
+
+const app = express();
+app.use(express.urlencoded({ extended: true }));
+
+/**
+ * Here we go!
+ * Pass myLogger as second argument to route handler
+ * Don't worry it calls next() for you :)
+ */
+app.get('/*', myLogger, (_req, res) => {
+  res.send({ message: 'Fingers crossed we get some nice logs' });
+});
+```
+
+## Features
+
+- For every request, it logs a human-friendly report for properties on express' request object
+
+- Current properties reported on
+
+  - baseUrl
+  - path
+  - originalUrl
+  - params
+  - query
+  - see `src/data.ts` for details
+
+- For each property, the report includes
+
   - property name e.g. `req.path`
-  - description (fairly detailed for some of the more important ones)
-    - see the one for req.params in the screenshots below
-  - JS type of the current property value
-  - current property value itself
+  - description
+  - JS type of the property's value
+  - the current property value itself
 
-## Example screenshots
+> I had the newcomer in mind, so some descriptions are verbose.
+> Watch this space for config options.
 
-Notice how you can see what url created the request from the logged output
+## Screenshots
 
 ![Alt Screenshot 1](./src/assets/screenshot1.png)
 ![Alt Screenshot 2](./src/assets/screenshot2.png)
 
-## Why?
+## Links
+
+- Project repository: https://github.com/dominicvana/logging-express
+
+- Issue tracker: https://github.com/dominicvana/logging-express/issues
+
+## Licensing
+
+This project is licensed under MIT license.
+
+---
+
+## **End of "proper" readme content**
+
+---
+
+> Keep reading for some learning philosophising...
 
 ### Hypothesis
 
-#### Learning node/express can be tough
+> For non-CS people, entering node-land is a bewildering step in the JS learning journey.
+>
+> Is learning node/express tougher than it could be?
 
-> Maybe tougher than it should be?
+Worth noting I'm 2 years into my own coding journey. By no means a pro, but I have noticed a change in how I approach learning new things.
 
-I'm around 2 years into my coding journey. With this bit of experience, I notice that when I need to understand something, I immediately **inspect** it in as much detail as I can.
+> When I don't understand something, I **immediately inspect it in as much detail as I can**.
 
-#### Some useful tactics
+#### Some tactics
 
 - console.log everything I don't know the type or value of
 
 - dive deep into nested data structures
 
-- look into every corner of the `__proto__`/`[[Prototype]]` chain... _"So that's why I can access `res.json()`!!"_
+- look into every corner of the `__proto__`/`[[Prototype]]` chain... _"So that's why I can access `res.json()`!"_
 
 - read docs and (with caution) stack overflow posts
 
-#### The problem
+#### The beginner's dilemma
 
-Unless you're pretty advanced, those tactics are
+Unless you're quite experienced, those tactics are
 
 1. cognitively taxing
 
 2. time consuming
 
-3. confidence destroying for some people. It wouldn't surprise me if junior developer impostor syndrome begins somewhere here
+3. confidence destroying for many of us
 
-> In that spirit, this middleware's purpose is to help free up some brain space. Your potential is too great to spend all day typing `console.log`. Reserve your efforts for the big stuff: learning and building.
+> In that spirit, this project's purpose is to help you free up some brain space while you learn something new and difficult.
+>
+> Your potential is too valuable to spend hours typing `console.log`.
+>
+> Reserve your efforts for the big stuff: **learning** and **building**.
